@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" type="text/css" href="/css/style1.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        alert("Filmen er nu bestilt");
+      });
+  });
+
+  $(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+  </script>
+</head>
+<body>
+  
+    
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a class="active" href="/home">Movie Description</a></li>
+        <li><a href="/remove">Delete Movie</a></li>
+        <li><a href="/opret">Create Movie</a></li>
+        <li><a href="/bestillinger">Orders</a></li>
+      </ul>
+
+
+  <section class="flex-containerTrailer">
+   
+              <% for(var i=0; i<Movies.length; i++) {%>
+                <div class="box flex1">
+                  <div class="inside">
+              <h3><%= Movies[i].Name %></h3>
+                </div>
+                    <iframe width="560" height="315"
+                    src="<%=Movies[i].Trailer %>">
+                    </iframe>
+                  </div>
+                  
+                <% } %>
+              
+              
+             </section>
+
+             
+             <div class="box bestilling">
+                <h1>udfyld denne for at bestille</h1>
+             <form action="/bestillinger" method="post">
+                
+                <input type="hidden"  name="MovieName" value="<%=Movies[0].Name %>">
+                <div class="form-group">
+                  <label for="usr">First Name:</label>
+                  <input type="text" class="form-control" id="usr" name="FirstName">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Last Name:</label>
+                  <input type="text" class="form-control" id="pwd" name="LastName">
+                </div>
+                <div class="form-group">
+                      <label for="pwd">Adress:</label>
+                      <input type="text" class="form-control" id="pwd" name="Adress">
+                    </div>
+                    
+                <button  type="submit">Bestil</button>
+              </form>
+            </div>
+          </section>
+         
+              <section class="flex-containerBestil">
+                <div class="box footer">
+                  <hr>
+                 ©2018 - NodeJs-Eksamen
+                </div>
+               </section>
+          
+</body>
+</html>

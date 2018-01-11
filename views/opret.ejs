@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style1.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a  href="/home">Movie Description</a></li>
+        <li><a href="/remove">Delete Movie</a></li>
+        <li><a class="active" href="/opret">Create Movie</a></li>
+        <li><a href="/bestillinger">Orders</a></li>
+      </ul>
+      
+    <div class="container">
+        <h2>Opret film</h2>
+        <form action="/opret" method="post">
+          <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr" name="Name">
+          </div>
+          <div class="form-group">
+            <label for="pwd">URL:</label>
+            <input type="text" class="form-control" id="pwd" name="URL">
+          </div>
+          <div class="form-group">
+              <label for="pwd">Trailer:</label>
+              <input type="text" class="form-control" id="pwd" name="Trailer">
+            </div>
+          <div class="form-group">
+                <label for="pwd">Duration:</label>
+                <input type="text" class="form-control" id="pwd" name="Duration">
+              </div>
+              <div class="form-group">
+                    <label for="pwd">Description:</label>
+                    <input type="text" class="form-control" id="pwd" name="Description">
+                  </div>
+          <button type="submit">Opret</button>
+        </form>
+      </div>
+      <section class="flex-containerOpret">
+        <div class="box footer">
+          <hr>
+         ©2018 - NodeJs-Eksamen
+        </div>
+       </section>
+</body>
+</html> 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/style1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/home">Movie Description</a></li>
+                <li><a class="active" href="/remove">Delete Movie</a></li>
+                <li><a href="/opret">Create Movie</a></li>
+                <li><a href="/bestillinger">Orders</a></li>
+              </ul>
+ <h3>Type name of movie to delete</h3>             
+<form action="remove" method="post">
+        <input type="text"  name="Name">
+        <button type="submit">Delete</button>
+</form>
+<div class="box footerRemove">
+        <hr>
+       ©2018 - NodeJs-Eksamen
+      </div>
+</body>
+</html>

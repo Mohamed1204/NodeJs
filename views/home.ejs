@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" type="text/css" href="/css/style1.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="/home">Home</a></li>
+        <li><a href="/home">Movie Description</a></li>
+        <li><a href="/remove">Delete Movie</a></li>
+        <li><a href="/opret">Create Movie</a></li>
+        <li><a href="/bestillinger">Orders</a></li>
+      </ul>
+
+      
+      
+
+  <section class="flex-container">
+
+      <div class="box flex2">
+          
+              <h2>Most Popular Movies</h2>            
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Movie Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Batman Begins</td>
+                   
+                  </tr>
+                  <tr>
+                    
+                    <td>Justice league</td>
+                  </tr>
+                  <tr>
+                    
+                    <td>Shawshank Redemption</td>
+                  </tr>
+                  <tr>
+                      
+                      <td>Harry Potter and the Philosopher's Stone</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Forrest Gump</td>
+                      </tr>
+                </tbody>
+              </table>
+            
+        </div>
+        <div class="box hej">
+                <% for(var i=0; i<Movies.length; i++) {%>
+                    
+                <div class="box flex1">
+                  <div class="inside">
+                    <%= Movies[i].Name %>
+                 </div>
+                    
+                    <img id="<%= Movies[i].Name %>" src="<%=Movies[i].URL %>"  style="width:150px;height:75px;">
+                    <form action="/home.ejs" method="post"><button id="batb" formaction="bestil" style="width:150px;">Bestil</button>
+                      <input type="hidden" name="Name" value="<%=Movies[i].Name %>">
+                    </form>
+                   
+               </div>
+                <% } %>
+        </div>
+                 </section>
+                 <section class="flex-container4">
+                  <div class="box foooter">
+                    <hr>
+                   ©2018 - NodeJs-Eksamen
+                  </div>
+                 </section>
+                 
+</html>

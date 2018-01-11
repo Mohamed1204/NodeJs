@@ -1,0 +1,119 @@
+@import '_vars';
+
+  /*Trailer*/
+  .flex-containerTrailer {
+    display: flex; }
+  
+    
+  .bestilling {/* bestillings formular*/
+    width: 500px;
+    height: 1000;
+    position: relative;
+    left: 30px; }
+  
+   
+   
+   /* orders*/
+  .flex-container3 { 
+    display: flex;
+    margin: 1em 0;
+    width: 1000px;
+    flex-flow: row wrap;
+    justify-content: flex-start; }
+  
+    
+  .flex3 {/* orders*/
+    margin: 25px; }
+  
+  
+    
+
+    /* Liste med movies*/
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap; }
+  
+    
+    .flex2 {/* Most Popular*/
+    display: flex;
+    flex-flow: column;
+    width: 300px; }
+  
+    
+  .flex1 {/*MovieBox*/
+    display: flex;
+    flex-flow: column;
+    margin: 30px; }
+  
+    
+  .hej {/*Moviebox*/
+    display: flex;
+    width: 1000px;
+    flex-flow: row wrap; }
+  
+    .inside { /* centrer text i moviebox */
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+  
+  
+
+   
+  /*nav bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $lightblack; 
+     li {
+      float: left; }
+     a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none; }
+     a:hover:not(.active) {
+      background-color: $black; }
+     }
+  
+
+
+
+  /* Footer*/
+  .flex-container4 {
+    display: flex;
+    height: 60px;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center; }
+  
+  
+  .flex-containerOpret {
+    display: flex;
+    height: 144px;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center; }
+  
+  .flex-containerBestil {
+    display: flex;
+    flex-flow: column;
+    align-items: center; }
+  
+  .footerRemove {
+    width: 180px;
+    position: relative;
+    top: 450px;
+    left: 600px; }
+
+    .active{
+        background-color: $green;
+    }
+
+
+
+
+
+
