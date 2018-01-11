@@ -9,6 +9,8 @@ app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 
+var Cors = require('cors');
+app.use(Cors());
 
 const movieModule = require('./API.js');
 app.use(movieModule);
